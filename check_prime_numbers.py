@@ -9,8 +9,11 @@ def check_prime_number(input_num):
 	return True
 
 my_array = []
-a = int(input("Please input a number or Enter 0 to exit...\n"))
-
+try:
+	a = int(input("Please input a number or Enter 0 to exit...\n"))
+except ValueError:
+	print("Please input a valid number")
+	a = int(input("Please input a number or Enter 0 to exit...\n"))
 
 while a:
 	my_array.append(a)
